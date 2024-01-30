@@ -39,7 +39,19 @@ nav {
   padding: 0.6% 3%;
   justify-content: space-between;
   align-items: center;
+  animation: slide-top 1500ms;
+  animation-timing-function: linear;
 }
+
+@keyframes slide-top {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateZ(0%);
+  }
+}
+
 nav img {
   z-index: 9;
   margin-left: -65%;
