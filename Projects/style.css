@@ -4,8 +4,12 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+}
+
+body {
   background-color: #242424;
 }
+
 .nav {
   min-height: 100vh;
   width: 100%;
@@ -113,7 +117,18 @@ nav .fas {
   display: none;
 }
 
+.main {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .main h1 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   margin-top: 5%;
   color: #fff;
   text-align: center;
@@ -122,20 +137,45 @@ nav .fas {
 }
 
 .card {
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 10%;
   display: flex;
-  width: 400px;
+  width: 500px;
   height: 250px;
-  background-color: red;
   border-radius: 20px;
   transition: 1s;
+  position: relative;
 }
 
 .card img {
+  z-index: -1;
   width: 100%;
   height: 100%;
   border-radius: 20px;
+}
+
+.iframe-1 {
+  z-index: 9;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.iframe-1 iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.card:hover .iframe-1,
+.iframe-1 iframe {
+  display: block !important;
+  opacity: 1.5;
 }
 
 .card:hover {
